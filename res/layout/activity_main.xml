@@ -1,55 +1,53 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:background="@drawable/aurora"
     tools:context=".MainActivity" >
 
-    <!--
-         The primary full-screen view. This can be replaced with whatever view
-         is needed to present your content, e.g. VideoView, SurfaceView,
-         TextureView, etc.
-    -->
-
-    <TextView
-        android:id="@+id/fullscreen_content"
+    <RelativeLayout
+        android:id="@+id/First"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:keepScreenOn="true"
-        android:text="@string/dummy_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
-        android:textStyle="bold" />
+        android:layout_height="0dp"
+        android:layout_weight="0.66" >
 
-    <!--
-         This FrameLayout insets its children based on system windows using
-         android:fitsSystemWindows.
-    -->
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/profileholder" />
 
-    <FrameLayout
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/Second"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true" >
+        android:layout_height="0dp"
+        android:layout_weight="1.00" >
 
-        <LinearLayout
-            android:id="@+id/fullscreen_content_controls"
-            style="?buttonBarStyle"
+        <TextView
+            android:id="@+id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_horizontal"
-            android:background="@color/black_overlay"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent" >
+            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
+            android:text="@string/welcomeUser"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Button
-                android:id="@+id/dummy_button"
-                style="?buttonBarButtonStyle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/dummy_button" />
-        </LinearLayout>
-    </FrameLayout>
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_below="@id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
+            android:text="@string/welcomeUser"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</FrameLayout>
+    </RelativeLayout>
+</LinearLayout>
