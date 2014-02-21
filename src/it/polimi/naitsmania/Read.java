@@ -66,6 +66,7 @@ public class Read extends Activity {
 				.setCancelable(false)
 				.setNeutralButton("OK",
 						new DialogInterface.OnClickListener() {
+							@Override
 							public void onClick(DialogInterface dialog,
 									int id) {
 								// if this button is clicked, just close

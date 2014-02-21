@@ -39,13 +39,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int First=0x7f090000;
         public static final int Second=0x7f090002;
-        public static final int action_settings=0x7f090005;
+        public static final int action_settings=0x7f090010;
+        public static final int buttonr=0x7f09000f;
+        public static final int buttons=0x7f09000c;
+        public static final int city=0x7f090008;
+        public static final int firstLink=0x7f090005;
         public static final int firstText=0x7f090004;
         public static final int imageView1=0x7f090001;
+        public static final int list=0x7f09000d;
+        public static final int mex=0x7f09000e;
+        public static final int name=0x7f090007;
+        public static final int surname=0x7f090006;
+        public static final int textView1=0x7f090009;
+        public static final int textView2=0x7f09000a;
+        public static final int textView3=0x7f09000b;
         public static final int welcome=0x7f090003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int create=0x7f030001;
+        public static final int group=0x7f030002;
+        public static final int read=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -53,10 +67,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int ci=0x7f06000a;
+        public static final int done=0x7f06000c;
+        public static final int firstLink=0x7f060007;
         public static final int firstText=0x7f060006;
         public static final int hello_world=0x7f060002;
         public static final int homePage=0x7f060003;
+        public static final int name=0x7f060009;
         public static final int profile=0x7f060004;
+        public static final int send=0x7f06000b;
+        public static final int sur=0x7f060008;
         public static final int welcomeUser=0x7f060005;
     }
     public static final class style {

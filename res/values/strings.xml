@@ -6,6 +6,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="homePage">Home</string>
     <string name="profile">Profile</string>
-	<string name="welcomeUser"> Welcome User!</string>
-	<string name="firstText"> To start using the application, first you have to </string>
+	<string name="welcomeUser">Welcome User!</string>
+	<string name="firstText">To start using the application, first you have to </string>
+	<string name="firstLink"><a href="http://www.google.com">Google</a>create a group.</string>
+	<string name="sur"></string>
+	<string name="name"></string>
+	<string name="ci"></string>
+	<string name="send"></string>
+	<string name="done"></string>
 </resources>

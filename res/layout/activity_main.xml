@@ -47,6 +47,17 @@
             android:gravity="center_vertical|top|fill_vertical|center_horizontal"
             android:text="@string/firstText"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        <TextView
+            android:id="@+id/firstLink"
+            android:layout_below="@id/firstText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
+            android:text="@string/firstLink"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
 </LinearLayout>
