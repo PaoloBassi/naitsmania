@@ -7,4 +7,5 @@
     <string name="homePage">Home</string>
     <string name="profile">Profile</string>
 	<string name="welcomeUser"> Welcome User!</string>
+	<string name="firstText"> To start using the application, first you have to </string>
 </resources>

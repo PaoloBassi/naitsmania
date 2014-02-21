@@ -36,17 +36,16 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical|top|fill_vertical|center_horizontal"
             android:text="@string/welcomeUser"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:id="@+id/firstText"
             android:layout_below="@id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:text="@string/welcomeUser"
+            android:text="@string/firstText"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </RelativeLayout>
