@@ -1,15 +1,12 @@
 package it.polimi.naitsmania;
 
 import android.os.Bundle;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.app.ActionBar;
 
 public class MainActivity extends Activity {
 
@@ -21,7 +18,6 @@ public class MainActivity extends Activity {
 		TextView firstLink = (TextView) findViewById(R.id.firstLink);
 		TextView secondLink = (TextView) findViewById(R.id.secondLink);
 		// Make the link appears clickable
-
 		firstLink.setMovementMethod(LinkMovementMethod.getInstance());
 		secondLink.setMovementMethod(LinkMovementMethod.getInstance());
 		// Click send to creation of groups
@@ -36,7 +32,7 @@ public class MainActivity extends Activity {
 		secondLink.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(getBaseContext(), PreparingToConnection.class);
+				Intent intent = new Intent(getBaseContext(), ConnectScreen.class);
 				startActivity(intent);
 			}
 		});
