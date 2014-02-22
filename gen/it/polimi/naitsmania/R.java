@@ -40,8 +40,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int First=0x7f090000;
         public static final int Second=0x7f090002;
-        public static final int action_settings=0x7f090021;
+        public static final int action_settings=0x7f090022;
         public static final int btnCreate=0x7f090019;
+        public static final int buttonnew=0x7f090021;
         public static final int buttonr=0x7f090020;
         public static final int buttons=0x7f09000e;
         public static final int city=0x7f09000a;

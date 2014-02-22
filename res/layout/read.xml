@@ -28,5 +28,15 @@
         android:layout_marginRight="21dp"
         android:background="#888888"
         android:text="@string/done" />
+    
+     <Button
+        android:id="@+id/buttonnew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonr"
+        android:layout_alignBottom="@+id/buttonr"
+        android:layout_alignRight="@+id/mex"
+        android:layout_marginRight="62dp"
+        android:text="New member" />
 
 </RelativeLayout>
