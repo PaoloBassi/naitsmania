@@ -55,7 +55,8 @@ public class Message extends Activity {
 		                       createNewTextRecord(name.getText().toString(), Locale.ENGLISH, true), 
 		                       createNewTextRecord(city.getText().toString(), Locale.ENGLISH, true),});
 		  
-		        if (mNfcAdapter != null)
+		        if (mNfcAdapter != null){
+		        	if(mNfcAdapter.isEnabled()){
 		        mNfcAdapter.setNdefPushMessage(mNdefMessage, ac);
 		        
 		    	AlertDialog.Builder adb = new AlertDialog.Builder(ctx);
@@ -65,7 +66,6 @@ public class Message extends Activity {
 						.setCancelable(false)
 						.setNeutralButton("OK",
 								new DialogInterface.OnClickListener() {
-									@Override
 									public void onClick(DialogInterface dialog,
 											int id) {
 										// if this button is clicked, just close
@@ -76,11 +76,52 @@ public class Message extends Activity {
 
 				adb.show();
 			}
-				
+		        	else{
+		        		
+		        		AlertDialog.Builder adb = new AlertDialog.Builder(ctx);
+						adb.setTitle("NFC Technology");
+
+						adb.setMessage("Enable NFC and send the message!")
+								.setCancelable(false)
+								.setNeutralButton("OK",
+										new DialogInterface.OnClickListener() {
+											public void onClick(DialogInterface dialog,
+													int id) {
+												// if this button is clicked, just close
+												// the dialog box and do nothing
+												dialog.cancel();
+											}
+						});
+						adb.show();
+		        		
+		        	}
+		        }
+		        
+		        else{
+		        	
+		        	AlertDialog.Builder adb = new AlertDialog.Builder(ctx);
+					adb.setTitle("NFC Technology");
+
+					adb.setMessage("You are using Bluetooth to send message.")
+							.setCancelable(false)
+							.setNeutralButton("OK",
+									new DialogInterface.OnClickListener() {
+										public void onClick(DialogInterface dialog,
+												int id) {
+											// if this button is clicked, just close
+											// the dialog box and do nothing
+											dialog.cancel();
+										}
+					});
+					adb.show();
+		        	
+					
+					// bluetooth sendmessage function here
+		        }
+			 }
 	});
 		
 	}
-	
 		 public static NdefRecord createNewTextRecord(String text, Locale locale, boolean encodeInUtf8) {
 		        byte[] langBytes = locale.getLanguage().getBytes(Charset.forName("US-ASCII"));
 		 
