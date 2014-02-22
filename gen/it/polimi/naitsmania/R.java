@@ -41,7 +41,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int First=0x7f090000;
         public static final int Second=0x7f090002;
         public static final int Third=0x7f090008;
-        public static final int action_settings=0x7f090013;
+        public static final int action_settings=0x7f090014;
+        public static final int buttonnew=0x7f090013;
         public static final int buttonr=0x7f090012;
         public static final int buttons=0x7f09000f;
         public static final int city=0x7f09000c;

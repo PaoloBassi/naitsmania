@@ -1,8 +1,12 @@
 package it.polimi.naitsmania;
 
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import android.app.Activity;
@@ -31,8 +35,10 @@ public class Read extends Activity {
     private PendingIntent mPendingIntent;
     private IntentFilter[] mIntentFilters;
     private String[][] mNFCTechLists;
+    private ArrayList<String> member = new ArrayList<String>();
     private FileOutputStream fOut = null;
 	private OutputStreamWriter osw = null;
+
  
     @Override
     public void onCreate(Bundle savedState) {
@@ -42,17 +48,26 @@ public class Read extends Activity {
         mTextView = (TextView)findViewById(R.id.mex);
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         Button read = (Button) findViewById(R.id.buttonr);
+        Button ne = (Button) findViewById(R.id.buttonnew);
         final Context con = this;
 
     	try{
-    	fOut = openFileOutput("group.txt",MODE_WORLD_WRITEABLE); 
-    	osw = new OutputStreamWriter(fOut);
+    		 
+   
     
     	
     }
     	catch (Exception e) { 
     		e.printStackTrace();
     	}
+    	
+    	ne.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				
+				mTextView.setText("waiting new memeber");
+			}});
         
         read.setOnClickListener(new View.OnClickListener() {
 
@@ -62,11 +77,10 @@ public class Read extends Activity {
 		AlertDialog.Builder adb = new AlertDialog.Builder(con);
 		adb.setTitle("NFC read");
 
-		adb.setMessage("message stored")
+		adb.setMessage("group stored")
 				.setCancelable(false)
 				.setNeutralButton("OK",
 						new DialogInterface.OnClickListener() {
-							@Override
 							public void onClick(DialogInterface dialog,
 									int id) {
 								// if this button is clicked, just close
@@ -76,6 +90,7 @@ public class Read extends Activity {
 		});
 
 		adb.show();
+		write(member);
 		
         }});
  
@@ -119,7 +134,7 @@ public class Read extends Activity {
                     }
                 }
                 
-                write(s);
+                member.add(s);
                 
             } catch (Exception e) {
                 Log.e("TagDispatch", e.toString());
@@ -146,16 +161,27 @@ public class Read extends Activity {
     }
 
     
-    public void write(String input){
+    @SuppressWarnings("deprecation")
+	public void write(ArrayList<String> input){
     	
-    	String data = input+";\n";
+    	int i;
+    	
     	try{
-    	osw.append(data);
-    	osw.flush();
+    		fOut = openFileOutput("group.txt",MODE_WORLD_WRITEABLE); 
+        	osw = new OutputStreamWriter(fOut);
+        	for(i=0;i<input.size();i++){
+        		osw.append(input.get(i)+";\n");
+            	osw.flush();
+        	}
+        	
+        	osw.close();
+        	fOut.close();
     	}
     	catch(Exception e)
-    	{}
+    	{
+    		System.out.println(e.getMessage());
+    		
+    	}
     	
     }
 }
-
