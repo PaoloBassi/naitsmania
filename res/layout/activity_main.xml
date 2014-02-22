@@ -1,94 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false"
-    android:orientation="vertical"
-    android:background="@drawable/aurora"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <RelativeLayout
-        android:id="@+id/First"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.66" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:contentDescription="@string/profile"
-            android:src="@drawable/profileholder" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/Second"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.77" >
-
-        <TextView
-            android:id="@+id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:text="@string/welcomeUser"
-            android:textAppearance="?android:attr/textAppearanceLarge" 
-            android:layout_marginBottom="10dp"/>
-
-        <TextView
-            android:id="@+id/firstText"
-            android:layout_below="@id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:text="@string/firstText"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-        <TextView
-            android:id="@+id/firstLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/firstText"
-            android:autoLink="web"
-            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:linksClickable="true"
-            android:text="@string/firstLink"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/myblue" />
-        
-        <TextView
-            android:id="@+id/secondText"
-            android:layout_below="@id/firstLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:text="@string/secondText"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-        
-        <TextView
-            android:id="@+id/secondLink"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/secondText"
-            android:autoLink="web"
-            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
-            android:linksClickable="true"
-            android:text="@string/secondLink"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/myblue" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/Third"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.20" >
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>
