@@ -10,6 +10,7 @@
     
     //Permisions
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.NFC" />
 
     <application
@@ -68,6 +69,16 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        
+        //Bluetooth activities.
+        <activity android:name="it.polimi.naitsmania.DeviceListActivity"
+                  android:label="@string/select_device"
+                  android:theme="@android:style/Theme.Dialog"
+                  android:configChanges="orientation|keyboardHidden" />
+        
+        <activity android:name="it.polimi.naitsmania.ConnectScreen"
+            android:label="@string/bluetooth_service"
+            android:configChanges="orientation|keyboardHidden"/>
         
     </application>
 
