@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
          <activity
-            android:name="com.nfc.Read"
+            android:name="it.polimi.naitsmania.Read"
             android:label="@string/app_name" >
              <intent-filter>
                  <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
@@ -45,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.nfc.Group"
+            android:name="it.polimi.naitsmania.Group"
             android:label="@string/app_name" >
              <intent-filter>
                  <action android:name="android.nfc.action.NDEF_DISCOVERED"/>

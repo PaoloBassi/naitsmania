@@ -26,8 +26,7 @@ public class CreateGroupActivity extends Activity{
 			final SharedPreferences sharedPref = getSharedPreferences(getString(R.string.groupInfo), Context.MODE_PRIVATE);
 			// Choose what to write in the textfield
 			String value = sharedPref.getString(getString(R.string.groupInfo), "No groups are registered");
-			if(tw!= null)
-				tw.setText(value);
+			tw.setText(value);
 			
 			btnCreate.setOnClickListener(new View.OnClickListener() {
 				
