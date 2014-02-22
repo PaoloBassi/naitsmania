@@ -7,21 +7,71 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    
+    //Permisions
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.NFC" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/homePage" >
         <activity
             android:name="it.polimi.naitsmania.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    <activity
+            android:name="it.polimi.naitsmania.Message"
+            android:label="@string/app_name" >
+             <intent-filter>
+                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+    			 <category android:name="android.intent.category.DEFAULT"/>
+    			 <data android:scheme="vnd.android.nfc"
+       				 android:host="ext"/>
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="it.polimi.naitsmania.Read"
+            android:label="@string/app_name" >
+             <intent-filter>
+                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+    			 <category android:name="android.intent.category.DEFAULT"/>
+    			 <data android:scheme="vnd.android.nfc"
+       				android:host="ext"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it.polimi.naitsmania.Group"
+            android:label="@string/app_name" >
+             <intent-filter>
+                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+    			 <category android:name="android.intent.category.DEFAULT"/>
+    			 <data android:scheme="vnd.android.nfc"
+       				android:host="ext"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="it.polimi.naitsmania.CreateGroupActivity"
+            	  android:label="@string/manage_group">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="it.polimi.naitsmania.PreparingToConnection"
+            	  android:label="@string/prepare_connection">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        
     </application>
+
+		
+
 
 </manifest>

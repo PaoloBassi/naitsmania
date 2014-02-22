@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:background="@drawable/aurora" >
+
+    <RelativeLayout
+        android:id="@+id/Second"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.80" >
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
+            android:text="@string/connectionTitle"
+            android:textAppearance="?android:attr/textAppearanceLarge" 
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/firstText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/welcome"
+            android:layout_marginTop="54dp"
+            android:gravity="center_vertical|top|fill_vertical|center_horizontal"
+            android:text="@string/connectionText"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/buttonConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/connect" />
+
+    </RelativeLayout>
+
+</LinearLayout>

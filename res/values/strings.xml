@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">naitsmania</string>
+    <string name="app_name">Naitsmania</string>
+    <string name="manage_group">Manage Groups</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="homePage">Home</string>
+    <string name="profile">Profile</string>
+	<string name="welcomeUser">Welcome User!</string>
+	<string name="firstText">To start using the application, first you have to </string>
+	<string name="secondText">Do you already have one? Do not waste time!</string>
+	<string name="thirdText">Here you can create a group! Add some basic informations.</string>
+	<string name="firstLink">create a group.</string>
+	<string name="secondLink">Start connecting to a screen!</string>
+	<string name="groupName">Group Name</string>
+	<string name="hintGroup">Max 10 characters</string>
+	<string name="password">Password</string>
+	<string name="numberGroup">Members</string>
+	<string name="two">2</string>
+	<string name="buttonCreate">Create</string>
+	<string name="displayGroup">Group Information</string>
+	<string name="Exit">Exit</string>
+	<string name="connectionTitle">Beginning Screen Connection!</string>
+	<string name="connectionText">Welcome in the screen connection section. Click on the following button to start the initial configuration.</string>
+	<string name="connect">Start Connection</string>
+	<string name="prepare_connection">Preparing the Connection</string>
+	<string name="title_other_devices">Other devices</string>
+	<string name="button_scan">Scan</string>
+	<string name="discoverable">Discoverable</string>
+	<string name="title_paired_devices">Paired devices title</string>
+	<string name="sur"></string>
+	<string name="name"></string>
+	<string name="ci"></string>
+	<string name="send"></string>
+	<string name="done"></string>
+	<!-- Shared preferences -->
+	<string name="groupInfo"></string>
 </resources>
