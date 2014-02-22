@@ -55,7 +55,8 @@
        				android:host="ext"/>
             </intent-filter>
         </activity>
-        <activity android:name="it.polimi.naitsmania.CreateGroupActivity">
+        <activity android:name="it.polimi.naitsmania.CreateGroupActivity"
+            	  android:label="@string/manage_group">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>

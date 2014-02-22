@@ -40,30 +40,44 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int First=0x7f090000;
         public static final int Second=0x7f090002;
-        public static final int Third=0x7f090008;
-        public static final int action_settings=0x7f090013;
-        public static final int buttonr=0x7f090012;
-        public static final int buttons=0x7f09000f;
-        public static final int city=0x7f09000c;
+        public static final int action_settings=0x7f090021;
+        public static final int btnCreate=0x7f090019;
+        public static final int buttonr=0x7f090020;
+        public static final int buttons=0x7f09000e;
+        public static final int city=0x7f09000a;
+        public static final int displayGroupLabel=0x7f09001b;
+        public static final int first=0x7f09000f;
         public static final int firstLink=0x7f090005;
         public static final int firstText=0x7f090004;
+        public static final int fourth=0x7f09001c;
+        public static final int groupInfoId=0x7f09001d;
+        public static final int groupName=0x7f090013;
+        public static final int groupNameLabel=0x7f090012;
         public static final int imageView1=0x7f090001;
-        public static final int list=0x7f090010;
-        public static final int mex=0x7f090011;
-        public static final int name=0x7f09000b;
+        public static final int list=0x7f09001e;
+        public static final int mex=0x7f09001f;
+        public static final int name=0x7f090009;
+        public static final int number=0x7f090017;
+        public static final int numberLabel=0x7f090016;
+        public static final int password=0x7f090015;
+        public static final int passwordLabel=0x7f090014;
+        public static final int second=0x7f090018;
         public static final int secondLink=0x7f090007;
         public static final int secondText=0x7f090006;
-        public static final int surname=0x7f09000a;
-        public static final int textView1=0x7f090009;
-        public static final int textView2=0x7f09000d;
-        public static final int textView3=0x7f09000e;
+        public static final int surname=0x7f090008;
+        public static final int textContainer=0x7f090011;
+        public static final int textView1=0x7f09000b;
+        public static final int textView2=0x7f09000c;
+        public static final int textView3=0x7f09000d;
+        public static final int third=0x7f09001a;
+        public static final int upperText=0x7f090010;
         public static final int welcome=0x7f090003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int connectgroup=0x7f030001;
-        public static final int connectscreen=0x7f030002;
-        public static final int create=0x7f030003;
+        public static final int connectscreen=0x7f030001;
+        public static final int create=0x7f030002;
+        public static final int creategroup=0x7f030003;
         public static final int group=0x7f030004;
         public static final int read=0x7f030005;
     }
@@ -71,22 +85,34 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int Exit=0x7f06000a;
-        public static final int action_settings=0x7f060001;
+        public static final int Exit=0x7f060013;
+        public static final int action_settings=0x7f060002;
         public static final int app_name=0x7f060000;
-        public static final int ci=0x7f06000d;
-        public static final int done=0x7f06000f;
-        public static final int firstLink=0x7f060007;
-        public static final int firstText=0x7f060006;
-        public static final int hello_world=0x7f060002;
-        public static final int homePage=0x7f060003;
-        public static final int name=0x7f06000c;
-        public static final int profile=0x7f060004;
-        public static final int secondLink=0x7f060009;
+        public static final int buttonCreate=0x7f060011;
+        public static final int ci=0x7f060016;
+        public static final int displayGroup=0x7f060012;
+        public static final int done=0x7f060018;
+        public static final int firstLink=0x7f06000a;
+        public static final int firstText=0x7f060007;
+        /**  Shared preferences 
+         */
+        public static final int groupInfo=0x7f060019;
+        public static final int groupName=0x7f06000c;
+        public static final int hello_world=0x7f060003;
+        public static final int hintGroup=0x7f06000d;
+        public static final int homePage=0x7f060004;
+        public static final int manage_group=0x7f060001;
+        public static final int name=0x7f060015;
+        public static final int numberGroup=0x7f06000f;
+        public static final int password=0x7f06000e;
+        public static final int profile=0x7f060005;
+        public static final int secondLink=0x7f06000b;
         public static final int secondText=0x7f060008;
-        public static final int send=0x7f06000e;
-        public static final int sur=0x7f06000b;
-        public static final int welcomeUser=0x7f060005;
+        public static final int send=0x7f060017;
+        public static final int sur=0x7f060014;
+        public static final int thirdText=0x7f060009;
+        public static final int two=0x7f060010;
+        public static final int welcomeUser=0x7f060006;
     }
     public static final class style {
         /** 

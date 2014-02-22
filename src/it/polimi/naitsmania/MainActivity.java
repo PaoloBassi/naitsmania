@@ -7,6 +7,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -18,6 +19,7 @@ public class MainActivity extends Activity {
 		TextView firstLink = (TextView) findViewById(R.id.firstLink);
 		TextView secondLink = (TextView) findViewById(R.id.secondLink);
 		// Make the link appears clickable
+
 		firstLink.setMovementMethod(LinkMovementMethod.getInstance());
 		secondLink.setMovementMethod(LinkMovementMethod.getInstance());
 		// Click send to creation of groups
