@@ -1,7 +1,5 @@
 package it.polimi.naitsmania;
 
-import java.security.PublicKey;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;

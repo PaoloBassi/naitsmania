@@ -21,6 +21,10 @@
 	<string name="buttonCreate">Create</string>
 	<string name="displayGroup">Group Information</string>
 	<string name="Exit">Exit</string>
+	<string name="connectionTitle">Beginning Screen Connection!</string>
+	<string name="connectionText">Welcome in the screen connection section. Click on the following button to start the initial configuration.</string>
+	<string name="connect">Start Connection</string>
+	<string name="prepare_connection">Preparing the Connection</string>
 	<string name="sur"></string>
 	<string name="name"></string>
 	<string name="ci"></string>
