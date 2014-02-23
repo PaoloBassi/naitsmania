@@ -100,7 +100,15 @@ public class ConnectScreen extends Activity {
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
         // Otherwise, setup the chat session
         } else {
-            if (mChatService == null) setupChat();
+            if (mChatService == null) {
+            	//Setup connection between phones.
+            	Intent serverIntent = new Intent(this, DeviceListActivity.class);
+                startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE);
+            	ensureDiscoverable();
+            	
+                //Setup chat window
+            	setupChat();
+            }
         }
     }
 
