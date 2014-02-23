@@ -24,6 +24,7 @@
 	<string name="connectionTitle">Beginning Screen Connection!</string>
 	<string name="connectionText">Welcome in the screen connection section. Click on the following button to start the initial configuration.</string>
 	<string name="prepare_connection">Preparing the Connection</string>
+	<string name="returning">Back</string>
 	<string name="sur"></string>
 	<string name="name"></string>
 	<string name="ci"></string>

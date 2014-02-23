@@ -40,37 +40,38 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     public static final class id {
         public static final int First=0x7f090000;
         public static final int Second=0x7f090002;
-        public static final int action_settings=0x7f09002d;
-        public static final int btnCreate=0x7f09001c;
-        public static final int buttonConnection=0x7f090029;
-        public static final int button_scan=0x7f090027;
+        public static final int action_settings=0x7f09002e;
+        public static final int btnBack=0x7f09001c;
+        public static final int btnCreate=0x7f09001d;
+        public static final int buttonConnection=0x7f09002a;
+        public static final int button_scan=0x7f090028;
         public static final int button_send=0x7f09000b;
-        public static final int buttonnew=0x7f09002c;
-        public static final int buttonr=0x7f09002b;
+        public static final int buttonnew=0x7f09002d;
+        public static final int buttonr=0x7f09002c;
         public static final int buttons=0x7f090011;
         public static final int city=0x7f09000e;
-        public static final int discoverable=0x7f09002f;
-        public static final int displayGroupLabel=0x7f09001e;
+        public static final int discoverable=0x7f090030;
+        public static final int displayGroupLabel=0x7f09001f;
         public static final int edit_text_out=0x7f09000a;
         public static final int first=0x7f090012;
         public static final int firstLink=0x7f090005;
         public static final int firstText=0x7f090004;
-        public static final int fourth=0x7f09001f;
-        public static final int groupInfoId=0x7f090020;
+        public static final int fourth=0x7f090020;
+        public static final int groupInfoId=0x7f090021;
         public static final int groupName=0x7f090016;
         public static final int groupNameLabel=0x7f090015;
         public static final int imageView1=0x7f090001;
         public static final int in=0x7f090009;
-        public static final int list=0x7f090028;
-        public static final int mex=0x7f09002a;
+        public static final int list=0x7f090029;
+        public static final int mex=0x7f09002b;
         public static final int name=0x7f09000d;
-        public static final int new_devices=0x7f090026;
+        public static final int new_devices=0x7f090027;
         public static final int number=0x7f09001a;
         public static final int numberLabel=0x7f090019;
-        public static final int paired_devices=0x7f090024;
+        public static final int paired_devices=0x7f090025;
         public static final int password=0x7f090018;
         public static final int passwordLabel=0x7f090017;
-        public static final int scan=0x7f09002e;
+        public static final int scan=0x7f09002f;
         public static final int second=0x7f09001b;
         public static final int secondLink=0x7f090007;
         public static final int secondText=0x7f090006;
@@ -79,11 +80,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int textView1=0x7f090008;
         public static final int textView2=0x7f09000f;
         public static final int textView3=0x7f090010;
-        public static final int third=0x7f09001d;
-        public static final int title_left_text=0x7f090021;
-        public static final int title_new_devices=0x7f090025;
-        public static final int title_paired_devices=0x7f090023;
-        public static final int title_right_text=0x7f090022;
+        public static final int third=0x7f09001e;
+        public static final int title_left_text=0x7f090022;
+        public static final int title_new_devices=0x7f090026;
+        public static final int title_paired_devices=0x7f090024;
+        public static final int title_right_text=0x7f090023;
         public static final int upperText=0x7f090013;
         public static final int welcome=0x7f090003;
     }
@@ -111,51 +112,52 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int app_name=0x7f060000;
         /**   BluetoothChat 
          */
-        public static final int bluetooth_service=0x7f06001d;
-        public static final int bt_not_enabled_leaving=0x7f06001f;
+        public static final int bluetooth_service=0x7f06001e;
+        public static final int bt_not_enabled_leaving=0x7f060020;
         public static final int buttonCreate=0x7f060011;
-        public static final int button_scan=0x7f060029;
-        public static final int ci=0x7f060019;
+        public static final int button_scan=0x7f06002a;
+        public static final int ci=0x7f06001a;
         /**  Options Menu 
          */
-        public static final int connect=0x7f06002a;
+        public static final int connect=0x7f06002b;
         public static final int connectionText=0x7f060015;
         public static final int connectionTitle=0x7f060014;
-        public static final int discoverable=0x7f06002b;
+        public static final int discoverable=0x7f06002c;
         public static final int displayGroup=0x7f060012;
-        public static final int done=0x7f06001b;
+        public static final int done=0x7f06001c;
         public static final int firstLink=0x7f06000a;
         public static final int firstText=0x7f060007;
         /**  Shared preferences 
          */
-        public static final int groupInfo=0x7f06001c;
+        public static final int groupInfo=0x7f06001d;
         public static final int groupName=0x7f06000c;
         public static final int hello_world=0x7f060003;
         public static final int hintGroup=0x7f06000d;
         public static final int homePage=0x7f060004;
         public static final int manage_group=0x7f060001;
-        public static final int name=0x7f060018;
-        public static final int none_found=0x7f060026;
-        public static final int none_paired=0x7f060025;
-        public static final int not_connected=0x7f06001e;
+        public static final int name=0x7f060019;
+        public static final int none_found=0x7f060027;
+        public static final int none_paired=0x7f060026;
+        public static final int not_connected=0x7f06001f;
         public static final int numberGroup=0x7f06000f;
         public static final int password=0x7f06000e;
         public static final int prepare_connection=0x7f060016;
         public static final int profile=0x7f060005;
+        public static final int returning=0x7f060017;
         /**   DeviceListActivity 
          */
-        public static final int scanning=0x7f060023;
+        public static final int scanning=0x7f060024;
         public static final int secondLink=0x7f06000b;
         public static final int secondText=0x7f060008;
-        public static final int select_device=0x7f060024;
-        public static final int send=0x7f06001a;
-        public static final int sur=0x7f060017;
+        public static final int select_device=0x7f060025;
+        public static final int send=0x7f06001b;
+        public static final int sur=0x7f060018;
         public static final int thirdText=0x7f060009;
-        public static final int title_connected_to=0x7f060021;
-        public static final int title_connecting=0x7f060020;
-        public static final int title_not_connected=0x7f060022;
-        public static final int title_other_devices=0x7f060028;
-        public static final int title_paired_devices=0x7f060027;
+        public static final int title_connected_to=0x7f060022;
+        public static final int title_connecting=0x7f060021;
+        public static final int title_not_connected=0x7f060023;
+        public static final int title_other_devices=0x7f060029;
+        public static final int title_paired_devices=0x7f060028;
         public static final int two=0x7f060010;
         public static final int welcomeUser=0x7f060006;
     }

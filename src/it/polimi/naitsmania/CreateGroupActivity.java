@@ -21,6 +21,7 @@ public class CreateGroupActivity extends Activity{
 			final EditText password = (EditText) findViewById(R.id.password);
 			final EditText elements = (EditText) findViewById(R.id.number);
 			Button btnCreate = (Button) findViewById(R.id.btnCreate);
+			Button btnBack = (Button) findViewById(R.id.btnBack);
 			final TextView tw = (TextView) findViewById(R.id.groupInfoId);
 			// access the info stored in the phone 
 			final SharedPreferences sharedPref = getSharedPreferences(getString(R.string.groupInfo), Context.MODE_PRIVATE);
@@ -45,7 +46,14 @@ public class CreateGroupActivity extends Activity{
 				}
 			});
 			
-			
+			// close the activity, back to the main menu
+						btnBack.setOnClickListener(new View.OnClickListener() {
+							
+							@Override
+							public void onClick(View v) {
+								 CreateGroupActivity.this.finish();
+							}
+						});
 		}
 		
 		private boolean isEmpty(EditText et){
