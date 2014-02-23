@@ -49,6 +49,7 @@ public class Read extends Activity {
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         Button read = (Button) findViewById(R.id.buttonr);
         Button ne = (Button) findViewById(R.id.buttonnew);
+        Button bluetoothBtn = (Button) findViewById(R.id.btnBT);
         final Context con = this;
 
     	try{
@@ -61,6 +62,19 @@ public class Read extends Activity {
     		e.printStackTrace();
     	}
     	
+    	// click for passing to bluetooth screen
+    	bluetoothBtn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(getBaseContext(), ConnectScreen.class);
+				startActivity(i);
+				// close this activity
+				Read.this.finish();
+			}
+		});
+    	
+    	// click for changing text
     	ne.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -69,6 +83,7 @@ public class Read extends Activity {
 				mTextView.setText("waiting new memeber");
 			}});
         
+    	// click to start reading
         read.setOnClickListener(new View.OnClickListener() {
 
 			@Override
