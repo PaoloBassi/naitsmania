@@ -1,5 +1,8 @@
 package it.polimi.naitsmania;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import it.polimi.naitsmania.contentprovider.MyPlacesContentProvider;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -53,9 +56,14 @@ public class ConnectScreen extends Activity {
     private EditText mOutEditText;
     private Button mSendButton;
     private Button blueButton;
+    private Button redButton;
+    private Button greenButton;
+    private Button yellowButton;
+    private int numb = 0;
     
     //Buttons
     private String readMessage;
+    private ArrayList<String> readMessageArray = new ArrayList<String>(Arrays.asList("Blue", "Red", "Green", "Yellow"));
 
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -163,12 +171,44 @@ public class ConnectScreen extends Activity {
         });
         
         //Initialize the buttons
-        mSendButton = (Button) findViewById(R.id.bluebutton);
-        mSendButton.setOnClickListener(new OnClickListener() {
+        blueButton = (Button) findViewById(R.id.bluebutton);
+        blueButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Send button item to myplaces.
-            	addPlaceToList(readMessage);
-                
+            	if (D) Log.e(TAG, "Blue button pushed.");
+            	addPlaceToList(readMessageArray.get(0).toString());
+            	Toast.makeText(getApplicationContext(), readMessageArray.get(0) + " has been added.", Toast.LENGTH_SHORT).show();
+            	//reArrange(0);
+            }
+        });
+        
+        redButton = (Button) findViewById(R.id.redbutton);
+        redButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Send button item to myplaces.
+            	addPlaceToList(readMessageArray.get(1).toString());
+            	Toast.makeText(getApplicationContext(), readMessageArray.get(1) + " has been added.", Toast.LENGTH_SHORT).show();
+                //reArrange(1);
+            }
+        });
+        
+        greenButton = (Button) findViewById(R.id.greenbutton);
+        greenButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Send button item to myplaces.
+            	addPlaceToList(readMessageArray.get(2).toString());
+            	Toast.makeText(getApplicationContext(), readMessageArray.get(2) + " has been added.", Toast.LENGTH_SHORT).show();
+                //reArrange(2);
+            }
+        });
+        
+        yellowButton = (Button) findViewById(R.id.yellowbutton);
+        yellowButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Send button item to myplaces.
+            	addPlaceToList(readMessageArray.get(3).toString());
+            	Toast.makeText(getApplicationContext(), readMessageArray.get(3) + " has been added.", Toast.LENGTH_SHORT).show();
+                //reArrange(3);
             }
         });
 
@@ -275,15 +315,22 @@ public class ConnectScreen extends Activity {
                 mConversationArrayAdapter.add("Me:  " + writeMessage);
                 break;
             case MESSAGE_READ:
+            	if (numb>=4) {
+            		return;
+            	}
                 byte[] readBuf = (byte[]) msg.obj;
                 // construct a string from the valid bytes in the buffer
                 readMessage = new String(readBuf, 0, msg.arg1);
                 mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
                 
-                //Input to buttons
-                if(D) Log.e(TAG, readMessage);
-                blueButton = (Button) findViewById(R.id.bluebutton);
-                blueButton.setText(readMessage);
+                if (D) Log.e(TAG, "Is about to add element to array.");
+                //Add to readMessageArray
+                readMessageArray.add(numb, readMessage);
+                setButtonText(numb, readMessage);
+                if (D) Log.e(TAG, "Added element to array.");
+                if (numb<=3) {
+                	numb += 1;
+                }
                 
                 break;
             case MESSAGE_DEVICE_NAME:
@@ -378,6 +425,43 @@ public class ConnectScreen extends Activity {
 			getContentResolver().update(placeUri, values, null, null);
 		}
 	}
+	private void setButtonText(int number, String theMessage) {
+        if (number == 0) {
+    		//Input to buttons
+            if(D) Log.e(TAG, theMessage);
+            blueButton = (Button) findViewById(R.id.bluebutton);
+            blueButton.setText(theMessage);
+        } else if (number == 1) {
+            if(D) Log.e(TAG, theMessage);
+            redButton = (Button) findViewById(R.id.redbutton);
+            redButton.setText(theMessage);
+        	
+        } else if (number == 2) {
+            if(D) Log.e(TAG, theMessage);
+            greenButton = (Button) findViewById(R.id.greenbutton);
+            greenButton.setText(theMessage);
+        } else if (number == 3) {
+            if(D) Log.e(TAG, theMessage);
+            yellowButton = (Button) findViewById(R.id.yellowbutton);
+            yellowButton.setText(theMessage);
+        }
+	}
+	/*
+	private void reArrange(int element) {
+		ArrayList <String> tempList = new ArrayList<String>();
+		tempList.addAll(readMessageArray);
+		readMessageArray.clear();
+		tempList.remove(0);
+		readMessageArray.addAll(tempList);
+		if (D) Log.e(TAG, "reArrange: " + element);
+		if (element < 4) { 
+			while (element != 3) {
+				setButtonText(element, readMessageArray.get(element).toString());
+				if (D) Log.e(TAG, "reArrange numb end: " + numb + " with name " + readMessageArray.get(element).toString());
+				element++;
+			}
+		}
+	}*/
 
 }
 	
