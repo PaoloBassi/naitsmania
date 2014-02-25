@@ -50,7 +50,7 @@ public class PoiDatabaseActivity extends ListActivity implements LoaderManager.L
 	  // Reaction to the menu selection
 	  @Override
 	  public boolean onOptionsItemSelected(MenuItem item) {
-	    switch (item.getItemId()) {
+	   switch (item.getItemId()) {
 	    case R.id.insert:
 	      createPlace();
 	      return true;
