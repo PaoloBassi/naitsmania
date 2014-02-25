@@ -7,8 +7,7 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
-    
-    //Permisions
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.NFC" />
@@ -18,72 +17,102 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/homePage"
         android:theme="@android:style/Theme.Black" >
+
         <activity
             android:name="it.polimi.naitsmania.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <activity
+        <activity
             android:name="it.polimi.naitsmania.Message"
             android:label="@string/app_name" >
-             <intent-filter>
-                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-    			 <category android:name="android.intent.category.DEFAULT"/>
-    			 <data android:scheme="vnd.android.nfc"
-       				 android:host="ext"/>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="ext"
+                    android:scheme="vnd.android.nfc" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name="it.polimi.naitsmania.Read"
             android:label="@string/NFCLeader" >
-             <intent-filter>
-                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-    			 <category android:name="android.intent.category.DEFAULT"/>
-    			 <data android:scheme="vnd.android.nfc"
-       				android:host="ext"/>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="ext"
+                    android:scheme="vnd.android.nfc" />
             </intent-filter>
         </activity>
         <activity
             android:name="it.polimi.naitsmania.Group"
             android:label="@string/app_name" >
-             <intent-filter>
-                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
-    			 <category android:name="android.intent.category.DEFAULT"/>
-    			 <data android:scheme="vnd.android.nfc"
-       				android:host="ext"/>
-            </intent-filter>
-        </activity>
-        <activity android:name="it.polimi.naitsmania.CreateGroupActivity"
-            	  android:label="@string/manage_group">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="ext"
+                    android:scheme="vnd.android.nfc" />
             </intent-filter>
         </activity>
-        <activity android:name="it.polimi.naitsmania.PreparingToConnection"
-            	  android:label="@string/prepare_connection">
+        <activity
+            android:name="it.polimi.naitsmania.CreateGroupActivity"
+            android:label="@string/manage_group" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="it.polimi.naitsmania.PreparingToConnection"
+            android:label="@string/prepare_connection" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- Bluetooth activities -->
+        <activity
+            android:name="it.polimi.naitsmania.DeviceListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/select_device"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="it.polimi.naitsmania.ConnectScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/bluetooth_service" />
         
-        //Bluetooth activities.
-        <activity android:name="it.polimi.naitsmania.DeviceListActivity"
-                  android:label="@string/select_device"
-                  android:theme="@android:style/Theme.Dialog"
-                  android:configChanges="orientation|keyboardHidden" />
+        <!-- Database -->
+                <activity
+            android:name="it.polimi.naitsmania.MyPlaces">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="it.polimi.naitsmania.PoiDatabaseActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
         
-        <activity android:name="it.polimi.naitsmania.ConnectScreen"
-            android:label="@string/bluetooth_service"
-            android:configChanges="orientation|keyboardHidden"/>
-        
+         <provider
+            android:name=".contentprovider.MyPlacesContentProvider"
+            android:authorities="it.polimi.naitsmania.contentprovider" >
+        </provider>
     </application>
-
-		
-
 
 </manifest>

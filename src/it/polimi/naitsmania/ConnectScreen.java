@@ -49,6 +49,7 @@ public class ConnectScreen extends Activity {
     private ListView mConversationView;
     private EditText mOutEditText;
     private Button mSendButton;
+    private Button blueButton;
 
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -259,6 +260,12 @@ public class ConnectScreen extends Activity {
                 // construct a string from the valid bytes in the buffer
                 String readMessage = new String(readBuf, 0, msg.arg1);
                 mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
+                
+                //Input to buttons
+                if(D) Log.e(TAG, readMessage);
+                blueButton = (Button) findViewById(R.id.bluebutton);
+                blueButton.setText(readMessage);
+                
                 break;
             case MESSAGE_DEVICE_NAME:
                 // save the connected device's name
