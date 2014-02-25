@@ -2,7 +2,7 @@
 <resources>
     
     <string-array name="priorities">
-        <item>Urgent</item>
-        <item>Reminder</item>
+        <item>Favorite</item>
+        <item>Normal</item>
     </string-array>
 </resources>

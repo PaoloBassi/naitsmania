@@ -65,9 +65,10 @@
 	<string name="no_places">Currently there are no places maintained</string>
 	<string name="menu_insert">Add Place</string>
 	<string name="menu_delete">Delete Place</string>
-	<string name="place_summary">Address</string>
+	<string name="place_summary">Place</string>
 	<string name="place_description">Delete Place</string>
-	<string name="place_edit_adress">Address</string>
+	<!-- I got the address, description and places a bit mixed up. adress & summary = place -->
+	<string name="place_edit_adress">Place</string>
 	<string name="place_edit_description">Description</string>
 	<string name="place_edit_confirm">Confirm</string>
 </resources>
