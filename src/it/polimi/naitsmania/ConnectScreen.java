@@ -1,9 +1,12 @@
 package it.polimi.naitsmania;
 
+import it.polimi.naitsmania.contentprovider.MyPlacesContentProvider;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -50,6 +53,9 @@ public class ConnectScreen extends Activity {
     private EditText mOutEditText;
     private Button mSendButton;
     private Button blueButton;
+    
+    //Buttons
+    private String readMessage;
 
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -61,6 +67,9 @@ public class ConnectScreen extends Activity {
     private BluetoothAdapter mBluetoothAdapter = null;
     // Member object for the chat services
     private BluetoothChatService mChatService = null;
+    
+    //Database
+    private Uri placeUri;
 
 
     @Override
@@ -150,6 +159,16 @@ public class ConnectScreen extends Activity {
                 TextView view = (TextView) findViewById(R.id.edit_text_out);
                 String message = view.getText().toString();
                 sendMessage(message);
+            }
+        });
+        
+        //Initialize the buttons
+        mSendButton = (Button) findViewById(R.id.bluebutton);
+        mSendButton.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                // Send button item to myplaces.
+            	addPlaceToList(readMessage);
+                
             }
         });
 
@@ -258,7 +277,7 @@ public class ConnectScreen extends Activity {
             case MESSAGE_READ:
                 byte[] readBuf = (byte[]) msg.obj;
                 // construct a string from the valid bytes in the buffer
-                String readMessage = new String(readBuf, 0, msg.arg1);
+                readMessage = new String(readBuf, 0, msg.arg1);
                 mConversationArrayAdapter.add(mConnectedDeviceName+":  " + readMessage);
                 
                 //Input to buttons
@@ -332,6 +351,33 @@ public class ConnectScreen extends Activity {
         }
         return false;
     }
+    
+	private void addPlaceToList(String place) {
+		String category = "Normal";
+		String summary = place;
+		String description = "Place";
+
+		// only save if either summary or description
+		// is available
+
+		if (summary.length() == 0) {
+			return;
+		}
+
+		ContentValues values = new ContentValues();
+		values.put(PlacesTable.COLUMN_CATEGORY, category);
+		values.put(PlacesTable.COLUMN_ADRESS, summary);
+		values.put(PlacesTable.COLUMN_DESCRIPTION, description);
+
+		if (placeUri == null) {
+			// New place
+			placeUri = getContentResolver().insert(
+					MyPlacesContentProvider.CONTENT_URI, values);
+		} else {
+			// Update place
+			getContentResolver().update(placeUri, values, null, null);
+		}
+	}
 
 }
 	
