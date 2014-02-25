@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ActionBar;
@@ -18,14 +19,13 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		TextView firstLink = (TextView) findViewById(R.id.firstLink);
-		TextView secondLink = (TextView) findViewById(R.id.secondLink);
+		Button groupBtn = (Button) findViewById(R.id.createGroupButton);
+		Button connectBtn = (Button) findViewById(R.id.connectionButton);
+		Button myPlaceBtn = (Button) findViewById(R.id.myPlacesButton);
 		// Make the link appears clickable
 
-		firstLink.setMovementMethod(LinkMovementMethod.getInstance());
-		secondLink.setMovementMethod(LinkMovementMethod.getInstance());
 		// Click send to creation of groups
-		firstLink.setOnClickListener(new View.OnClickListener() {
+		groupBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), CreateGroupActivity.class);
@@ -33,10 +33,18 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		secondLink.setOnClickListener(new View.OnClickListener() {
+		connectBtn.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Intent intent = new Intent(getBaseContext(), PreparingToConnection.class);
+				startActivity(intent);
+			}
+		});
+		
+		myPlaceBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(getBaseContext(), PoiDatabaseActivity.class);
 				startActivity(intent);
 			}
 		});
